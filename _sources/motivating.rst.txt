@@ -181,6 +181,8 @@ Because deep learning tools experiments have uncertainty, there is uncertainty i
 
 Astnn Result
 ------------
+`Github <https://github.com/clonescaper/CLONESCAPER/tree/main/motivationData/Machine_learning_Test_Result/astnn>`_.
+data location
 in astnn_motivation/300
 
 +-------------------------------------------------------+
@@ -212,7 +214,7 @@ in astnnMotivationResult reserve the prediction result.
 | 3000000600 | 3000000601 |
 +------------+------------+
 
-are the corresponding test result
+test result
 
 +-----------------+----------------------+----------------------+----------------------+--------------+ 
 | correct: type:1 | test1_id: 3000000200 | test2_id: 3000000201 | true: 1              | predicted: 1 | 
@@ -228,7 +230,9 @@ are the corresponding test result
 
 FCDetector Result 
 -----------------
-\motivation_data\OriginalChangedPair
+`Github <https://github.com/clonescaper/CLONESCAPER/tree/main/motivationData/Machine_learning_Test_Result/fcdector>`_.
+data location
+\\motivation_data\\OriginalChangedPair
 
 +---------+-----+----------+------+
 | 142/1.c | :#1 | original | code |
@@ -238,12 +242,17 @@ FCDetector Result
 
 FcdectorMotivationResult.txt reserve the test result.
 
+test result
+
 +--------------+----------------+-------+-------+
 | pred_cur:[0] | traget_cur:[1] | 142/1 | 142/1 |
 +--------------+----------------+-------+-------+
 
 TBCCD Result
 -------------
+`Github <https://github.com/clonescaper/CLONESCAPER/tree/main/motivationData/Machine_learning_Test_Result/tbccd>`_.
+
+data location:
 
 +---------------------------------+-------+--------------------+
 | \motivation_data\ProgramsDump   | 142.c | :#1 original  code |
@@ -252,6 +261,8 @@ TBCCD Result
 +---------------------------------+-------+--------------------+
 
 TbccdMotivationResult.txt reserve the test result
+
+test result 
 
 +------------+----------------------------------------------------------------------------------------------------------------+
 | correct: 1 | predict: -1 clone_paris: ['./TBCCD/TestDate/ProgramsDump/142.c', './TBCCD/TestDate/ProgramsMutate/142.c', '1'] |

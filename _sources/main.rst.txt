@@ -6,9 +6,9 @@ Tool Description
 -----------------
 
 
-CLONESCAPER, a lightweight yet practical code transformation approach that challenges recent ML-learning based clone detectors. In Clonescaper, we have developed 15 equivalence transformations (e.g., renaming variables, converting for-loop to while-loop, swapping code order, etc.).
+CLONESCAPER a lightweight yet practical code transformation approach that challenges recent ML-learning based clone detectors. In Clonescaper, we have developed 15 equivalence transformations (e.g., renaming variables, converting for-loop to while-loop, swapping code order, etc.).
 
-To quickly fnd the workable solutions among all possible transformations, we adopt four diﬀerent strategies to search for eﬀective solutions, including All-Mutation (AM), Random-Mutation (RM), Genetic Algorithm (GA), Markov chain Monte Carlo (MCMC).
+To quickly find the workable solutions among all possible transformations, we adopt four diﬀerent strategies to search for eﬀective solutions, including All-Mutation (AM), Random-Mutation (RM), Genetic Algorithm (GA), Markov chain Monte Carlo (MCMC).
 
 
 Implementation Details
