@@ -1,20 +1,20 @@
-.. clonescaperTestResult documentation master file, created by
-   sphinx-quickstart on Fri Feb  5 23:33:26 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Welcome to clonescaperTestResult's documentation!
-=================================================
+HOME 
+==============================
+
+A brief introduction to clonescaper and explanation of the test data. The results of the experiment are saved here `Github <https://github.com/clonescaper/CLONESCAPER.git>`_.
+
+
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 2
+    :caption: INTRODUCTION
 
-	issta
+   main
+   motivating
+   rq1
+   rq2
+   rq3
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
