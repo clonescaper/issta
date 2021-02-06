@@ -7,7 +7,7 @@ A brief introduction to clonescaper and explanation of the test data. The result
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: INTRODUCTION
 
    main

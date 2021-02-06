@@ -89,27 +89,10 @@
 <li class="toctree-l1"><a class="reference internal" href="motivating.html">Motivating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rq1.html">RQ1</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">RQ2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#astnn">Astnn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#all-mutation">All Mutation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#random-mutation">Random Mutation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#genetic-algorithm">Genetic Algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mcmc">MCMC</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#fcdetector">FCDetector</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">All Mutation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Random Mutation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Genetic Algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">MCMC</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#tbccd">TBCCD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id7">All Mutation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">Random Mutation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">Genetic Algorithm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">MCMC</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#astnn">Astnn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fcdetector">FCDetector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tbccd">TBCCD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-results">Final Results</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rq3.html">RQ3</a></li>
@@ -184,53 +167,122 @@
   <div class="section" id="rq2">
 <h1>RQ2<a class="headerlink" href="#rq2" title="Permalink to this headline">¶</a></h1>
 <p>Can Clonescaper still escape from the ML-based detectors enhanced by adversarial training?</p>
+<p>In this section, we try to answer RQ2 with the experimental results. That is, whether or not augmenting the training of ML-based detectors with adversarial samples can defend Clonescaper. A common idea of reinforcing such detectors is to fuse the spear into the shield, which means we can convert the code clone pairs from Clonescaper to be adversarial samples to re-train the ML models.</p>
+<p>Table 1 summarizes the performance of the ML-based detectors before (Original Performance) and after (New Performance) the adversarial training.P , R and F1 denote precision, recall, and overall performance, respectively.</p>
+<p>Overall, the adversarial training indeed promotes the performance of these ML-based detectors.</p>
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">Table 1 The performance of ML-based detectors on OJClone data</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td colspan="3"><p>Original Performance</p></td>
+<td colspan="3"><p>New Perfromance</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>P</p></td>
+<td><p>R</p></td>
+<td><p>F1</p></td>
+<td><p>P</p></td>
+<td><p>R</p></td>
+<td><p>F1</p></td>
+</tr>
+<tr class="row-odd"><td><p>ASTNN</p></td>
+<td><p>0.98%</p></td>
+<td><p>0.92%</p></td>
+<td><p>0.95%</p></td>
+<td><p>0.99%</p></td>
+<td><p>0.97%</p></td>
+<td><p>0.98%</p></td>
+</tr>
+<tr class="row-even"><td><p>TBCCD</p></td>
+<td><p>0.99%</p></td>
+<td><p>0.99%</p></td>
+<td><p>0.99%</p></td>
+<td><p>1.00%</p></td>
+<td><p>0.98%</p></td>
+<td><p>0.99%</p></td>
+</tr>
+<tr class="row-odd"><td><p>FCDetector</p></td>
+<td><p>0.97%</p></td>
+<td><p>0.95%</p></td>
+<td><p>0.96%</p></td>
+<td><p>0.97%</p></td>
+<td><p>0.97%</p></td>
+<td><p>0.97%</p></td>
+</tr>
+</tbody>
+</table>
+<p>The data used during the test is the same as in RQ1, so the results are in a similar format.</p>
 <div class="section" id="astnn">
 <h2>Astnn<a class="headerlink" href="#astnn" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/clonescaper/CLONESCAPER/tree/main/RQ2-mlDetectorsResult/astnn">Github</a></p>
-<div class="section" id="all-mutation">
-<h3>All Mutation<a class="headerlink" href="#all-mutation" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="random-mutation">
-<h3>Random Mutation<a class="headerlink" href="#random-mutation" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="genetic-algorithm">
-<h3>Genetic Algorithm<a class="headerlink" href="#genetic-algorithm" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="mcmc">
-<h3>MCMC<a class="headerlink" href="#mcmc" title="Permalink to this headline">¶</a></h3>
-</div>
+<p>All Mutation</p>
+<p>Random Mutation</p>
+<p>Genetic Algorithm</p>
+<p>MCMC</p>
 </div>
 <div class="section" id="fcdetector">
 <h2>FCDetector<a class="headerlink" href="#fcdetector" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/clonescaper/CLONESCAPER/tree/main/RQ2-mlDetectorsResult/Fcdector">Github</a></p>
-<div class="section" id="id2">
-<h3>All Mutation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id3">
-<h3>Random Mutation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id4">
-<h3>Genetic Algorithm<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id5">
-<h3>MCMC<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-</div>
+<p>All Mutation</p>
+<p>Random Mutation</p>
+<p>Genetic Algorithm</p>
+<p>MCMC</p>
 </div>
 <div class="section" id="tbccd">
 <h2>TBCCD<a class="headerlink" href="#tbccd" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/clonescaper/CLONESCAPER/tree/main/RQ2-mlDetectorsResult/tbccd">Github</a></p>
-<div class="section" id="id7">
-<h3>All Mutation<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>All Mutation</p>
+<p>Random Mutation</p>
+<p>Genetic Algorithm</p>
+<p>MCMC</p>
 </div>
-<div class="section" id="id8">
-<h3>Random Mutation<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id9">
-<h3>Genetic Algorithm<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="id10">
-<h3>MCMC<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
-</div>
+<div class="section" id="final-results">
+<h2>Final Results<a class="headerlink" href="#final-results" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-center" id="id4">
+<caption><span class="caption-text">The new ER values after adversarial training</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Detector</p></td>
+<td><p>AM</p></td>
+<td><p>RM</p></td>
+<td><p>GM</p></td>
+<td><p>MCMC</p></td>
+</tr>
+<tr class="row-even"><td><p>ASTNN</p></td>
+<td><p>82.73%</p></td>
+<td><p>78.77%</p></td>
+<td><p>80.68%</p></td>
+<td><p>77.09%</p></td>
+</tr>
+<tr class="row-odd"><td><p>TBCCD</p></td>
+<td><p>27.65%</p></td>
+<td><p>14.00%</p></td>
+<td><p>25.69%</p></td>
+<td><p>14.20%</p></td>
+</tr>
+<tr class="row-even"><td><p>FCDetector</p></td>
+<td><p>6.58%</p></td>
+<td><p>13.91%</p></td>
+<td><p>18.61%</p></td>
+<td><p>16.40%</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
